@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving school dashboard</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="instructor-style.css">
+
+</head>
+<body>
+    <!--************navbar******************-->
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="profil">
+
+                    <div class="img-box">
+                        <img src="assets/driving school vector modern sport car.jpg" alt="profil">
+                    </div>
+                    <h2>fatima ezzahra</h2>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/dash.html">
+                        <span class="icon"><i class='bx bxs-home'></i></span>
+                        <span class="tittle">dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/student.html">
+                        <span class="icon"><i class='bx bx-group'></i></span>
+                        <span class="tittle">student progress</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/profil.html">
+                        <span class="icon"><i class='bx bxs-show' ></i></span>
+                        <span class="tittle">profil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/instructor.html">
+                        <span class="icon"><i class='bx bx-book'></i></span>
+                        <span class="tittle">instructor</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-money' ></i></span>
+                        <span class="tittle">payment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/vehicule.html">
+                        <span class="icon"><i class='bx bxs-car' ></i></span>
+                        <span class="tittle">vehicule/Maintenance</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="http://127.0.0.1:5500/login.html">
+                        <span class="icon"><i class='bx bx-log-out'></i></span>
+                        <span class="tittle">log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+<div class="content">
+        <!--***********head and search bar****************-->
+        <header class="header-content">
+            <div class="titre">
+                <h2>welcom back!</h2>
+                <span class="span-1">here's what happening in your school</span>
+            </div>
+            <div class="search-logo">
+                <div class="search-bar">
+                    <label for="search"><i class='bx bx-search-alt-2' ></i></label>
+                    <input type="search" name="search" id="search" placeholder="search here">
+                </div>
+                <div class="change">
+                    <a href="http://127.0.0.1:5500/dash.html">dash</a><span> / </span><a href="http://127.0.0.1:5500/student.html">student progresse</a>
+                </div>
+            </div>
+        </header>
+         <!--buttons-->
+         <div class="search-container">
+            <div class="search-input">
+              <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+
+            <div class="search-options">
+              <select id="searchOptions">
+                <option value="all agency">All agency</option>
+                <option value="Agence 1">Agence 1</option>
+                <option value="Agence 2">Agence 2</option>
+                <option value="Agence 3">Agence 3</option>
+                <option value="Agence 4">Agence 4</option>
+                <option value="Agence 4">Agence 5</option>
+                <option value="Agence 4">Agence 6</option>
+              </select>
+              <button type="button" onclick="search()">Search</button>
+            </div>
+          </div>
+          <!--***********************titre*********************-->
+        <div class="titre">
+            <h2>Assignment of Instructors</h2>
+        </div>
+        <div class="find">
+           <div class="trouver">
+               <a href="http://127.0.0.1:5500/student.html">Active students</a> <span>/</span>
+               <a href="http://127.0.0.1:5500/inactive-stud.html">inactive students</a>
+           </div>
+           <div class="add">
+               <input type="text" id="findInput" placeholder="find instructor">
+               <button type="button" onclick="Add()"><a href="http://127.0.0.1:5500/add-student.html">Add</a></button>
+           </div>
+
+          
+        </div>
+
+        <!--********************table*************************-->
+        <div class="table">
+               
+           <table>
+            <thead>
+              <tr>
+                <th>Profile</th>
+                <th>Instructor</th>
+                <th>contact</th>
+                <th>Agency</th>
+                <th>Schedule</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="assets/user-200x300.webp" alt="Profile 1" class="images"></td>
+                <td>John Doe</td>
+                <td>john@example.com<br>06 60 60 60 60</td>
+                <td>Agency 1</td>
+                <td>2024-04-25 09:00 AM</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="assets/user-200x300.webp" alt="Profile 2"  class="images"></td>
+                <td>Jane Smith</td>
+                <td>smith@example.com<br>06 60 60 60 60</td>
+                <td>Agency 2</td>
+                <td>2024-04-25 09:00 AM</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="assets/user-200x300.webp" alt="Profile 3"  class="images"></td>
+                <td>Jane Smith</td>
+                <td>jane@example.com<br>06 60 60 60 60</td>
+                <td>Agency 2</td>
+                <td>2024-04-25 09:00 AM</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="assets/user-200x300.webp" alt="Profile 4"  class="images"></td>
+                <td>Jane Smith</td>
+                <td>smith@example.com<br>06 60 60 60 60</td>
+                <td>Agency 2</td>
+                <td>2024-04-25 09:00 AM</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="assets/user-200x300.webp" alt="Profile 5"  class="images"></td>
+                <td>Jane Smith</td>
+                <td>jane@example.com<br>06 60 60 60 60</td>
+                <td>Agency 2</td>
+                <td>2024-04-25 09:00 AM</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+              
+              
+            </tbody>
+          </table> 
+        </div> 
+ 
+      
+
+</div>
+    
+
+</body>
+</html>

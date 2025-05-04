@@ -1,0 +1,323 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--black);
+ }
+ :root {
+     --red: #ff0000;
+     --black: #111;
+     --white: #fff;
+     --gray: #808080;
+ }
+ body{
+     display: flex;
+     height: 100vh;
+    width: 100vw;
+    background: white;
+ }
+ .container{
+     position: relative;
+    
+ }
+ .img-box{
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     overflow: hidden;
+     border: 3px solid var(--black);
+     flex-shrink: 0;
+     
+ }
+ .img-box img{
+     width: 100%;
+ }
+ .profil{
+     /*display:none;   hadi flwl mli jina nkhdmo menu 3mlna ikhfae moa9at n photo*/
+     display: flex;
+     align-items: center;
+     gap: 30px;
+     padding: 10px;
+ }
+ .profil h2{
+     font-size: 20px;
+     text-transform: capitalize;
+ }
+ .menu{
+     position: relative;
+     background: red;
+     width: 100px;
+     height: 100vh;
+     padding: 20px;
+     overflow: hidden;
+ }
+ .menu:hover{
+     width: 310px;
+ }
+ .menu ul{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+ }
+ .menu ul li{
+      position: relative;
+      width: 100%;
+      list-style: none;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+     
+ 
+ }
+ .menu ul li:hover{
+     background-color: var(--white);
+     width: 100%;
+ }
+ .menu ul li:nth-child(1){
+     margin-bottom: 40px;
+     pointer-events: none;
+ }
+ .menu ul li a{
+    position: relative;
+     display: block;
+     text-transform: capitalize;
+     width: 100%;
+     display: flex;
+     text-decoration: none;
+     gap: 8px;
+     font-size: 20px;
+     
+ 
+ }
+ .menu ul li:hover a{
+     color: var(--red);
+ }
+ .menu ul li a .icon{
+     position: relative;
+     display: block;
+     min-height: 60px;
+     height: 60px;
+     line-height: 75px;
+     text-align: center;
+     padding: 0 20px;
+ }
+ .menu ul li a .icon i{
+     font-size: 2.5rem;
+ }
+ .menu ul li a .tittle{
+     position: relative;
+     display: block;
+     padding: 0 10px;
+     height: 60px;
+     line-height: 60px;
+     text-align: start;
+     white-space: nowrap;
+     color: var(--black);
+ }
+ /* ************************curvue outside*********************** */
+ .menu ul li:hover a::before{
+     content: "";
+     position: absolute;
+     right: 0;
+     top: -50px;
+     width: 50px;
+     height: 50px;
+     background-color: /*red => rja3nah transparant*/ transparent;
+     border-radius: 50%;
+     box-shadow: 35px 35px 0 10px var(--white);
+     pointer-events: none;
+   
+ }
+ .menu ul li:hover a::after{
+     content: "";
+     position: absolute;
+     right: 0;
+     bottom: -50px;
+     width: 50px;
+     height: 50px;
+     background-color: /*red => rja3nah transparant*/ transparent;
+     border-radius: 50%;
+     box-shadow: 35px -35px 0 10px var(--white);
+     pointer-events: none;
+ }
+ .logout{
+    transform: translatey(190px);
+    
+ }
+ .logout a{
+     background-color: var(--white);
+     
+ }
+ 
+ /* ************content and search bar************ */
+ .content{
+    width: 100%;
+   /*height: 100%;*/
+    margin: 10px;
+    padding: 10px;
+ }
+ .header-content{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 80px;
+   background: red;
+   border-radius: 20px;
+   padding: 0 13px;
+ }
+ .content .change a,span{
+     color: var(--white);
+ }
+ .search-logo{
+     display: flex;
+     align-items: center;
+     gap: 5px;
+ }
+ .search-bar{
+     display: flex;
+     align-items: center;
+     background-color: white ;
+     border-radius: 20px;
+     height: 150%;
+     padding: 0px 5px;
+ }
+ .search-bar i{
+     color: grey;
+     font-size: 20px;
+ }
+ .search-bar:hover i{
+     transform: rotate(360deg);
+ }
+ #search{
+     width: 85%;
+     padding: 10px;
+     font-size: 15px ;
+     border: none;
+     outline: none;
+ }
+ .data-info{
+    /* background: var(--gray);*/
+     width: 100%;
+     margin: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     
+     
+ }
+ .box .data{
+     background: var(--red);
+     height: 150px;
+     flex-basis: 150px;
+     flex-grow: 1;
+     border-radius: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+ }
+ .data-info .box i{
+     font-size: 30px;
+ }
+ .data-info .box .data{
+     text-align: center;
+ }
+ .data-info .box .data span{
+     font-size: 30px;
+ }
+ .change a{
+     text-decoration: none;
+ }
+ /********************profil*****************************/
+  
+  .profile {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .profile-buttons button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .profile-image {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .prof{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  .change-image-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  .profile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: 30px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .save-button {
+    grid-column: span 2;
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    background-color: red;
+  }
+  

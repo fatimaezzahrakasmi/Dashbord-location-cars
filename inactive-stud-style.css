@@ -1,0 +1,298 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--black);
+ }
+ :root {
+     --red: #ff0000;
+     --black: #111;
+     --white: #fff;
+     --gray: #808080;
+ }
+ body{
+     display: flex;
+     height: 100vh;
+    width: 100vw;
+    background: white;
+ }
+ .container{
+     position: relative;
+    
+ }
+ .img-box{
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     overflow: hidden;
+     border: 3px solid var(--black);
+     flex-shrink: 0;
+     
+ }
+ .img-box img{
+     width: 100%;
+ }
+ .profil{
+     /*display:none;   hadi flwl mli jina nkhdmo menu 3mlna ikhfae moa9at n photo*/
+     display: flex;
+     align-items: center;
+     gap: 30px;
+ }
+ .profil h2{
+     font-size: 20px;
+     text-transform: capitalize;
+ }
+ .menu{
+     position: relative;
+     background: red;
+     width: 100px;
+     height: 100vh;
+     padding: 20px;
+     overflow: hidden;
+ }
+ .menu:hover{
+     width: 310px;
+ }
+ .menu ul{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+ }
+ .menu ul li{
+      position: relative;
+      width: 100%;
+      list-style: none;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+     
+ 
+ }
+ .menu ul li:hover{
+     background-color: var(--white);
+     width: 100%;
+ }
+ .menu ul li:nth-child(1){
+     margin-bottom: 40px;
+     pointer-events: none;
+ }
+ .menu ul li a{
+    position: relative;
+     display: block;
+     text-transform: capitalize;
+     width: 100%;
+     display: flex;
+     text-decoration: none;
+     gap: 8px;
+     font-size: 20px;
+     
+ 
+ }
+ .menu ul li:hover a{
+     color: var(--red);
+ }
+ .menu ul li a .icon{
+     position: relative;
+     display: block;
+     min-height: 60px;
+     height: 60px;
+     line-height: 75px;
+     text-align: center;
+     padding: 0 20px;
+ }
+ .menu ul li a .icon i{
+     font-size: 2.5rem;
+ }
+ .menu ul li a .tittle{
+     position: relative;
+     display: block;
+     padding: 0 10px;
+     height: 60px;
+     line-height: 60px;
+     text-align: start;
+     white-space: nowrap;
+     color: var(--black);
+ }
+ /* ************************curvue outside*********************** */
+ .menu ul li:hover a::before{
+     content: "";
+     position: absolute;
+     right: 0;
+     top: -50px;
+     width: 50px;
+     height: 50px;
+     background-color: /*red => rja3nah transparant*/ transparent;
+     border-radius: 50%;
+     box-shadow: 35px 35px 0 10px var(--white);
+     pointer-events: none;
+   
+ }
+ .menu ul li:hover a::after{
+     content: "";
+     position: absolute;
+     right: 0;
+     bottom: -50px;
+     width: 50px;
+     height: 50px;
+     background-color: /*red => rja3nah transparant*/ transparent;
+     border-radius: 50%;
+     box-shadow: 35px -35px 0 10px var(--white);
+     pointer-events: none;
+ }
+ .logout{
+    transform: translatey(190px);
+    
+ }
+ .logout a{
+     background-color: var(--white);
+     
+ }
+ 
+ /* ************head and search bar************ */
+ .content{
+    width: 100%;
+   /*height: 100%;*/
+    margin: 10px;
+    padding: 10px;
+ }
+ .header-content{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 80px;
+   background: red;
+   border-radius: 20px;
+   padding: 0 13px;
+ }
+ .content .change a,span{
+     color: var(--white);
+     text-decoration: none;
+ }
+ .search-logo{
+     display: flex;
+     align-items: center;
+     gap: 5px;
+ }
+ .search-bar{
+     display: flex;
+     align-items: center;
+     background-color: white ;
+     border-radius: 20px;
+     height: 150%;
+     padding: 0px 5px;
+ }
+ .search-bar i{
+     color: grey;
+     font-size: 20px;
+ }
+ .search-bar:hover i{
+     transform: rotate(360deg);
+ }
+ #search{
+     width: 85%;
+     padding: 10px;
+     font-size: 15px ;
+     border: none;
+     outline: none;
+ }
+ /* *****************************buttons******************************** */
+ .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .search-input {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  input[type="text"],
+select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+ 
+}
+button {
+    padding: 8px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: red;
+  }
+  /* **************************** titre ************************** */
+.titre{
+    padding: 30px;
+  }
+
+  /* *************************find**************************** */
+  .find{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .trouver{
+    flex-grow: 1;
+    margin-right: 10px;
+    
+  }
+  #findInput{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .find .trouver a{
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.697);
+
+  }
+  .find .trouver span{
+    color: black;
+  }
+  .find .add a{
+    text-decoration: none;
+    color: white;
+  }
+/**********************table *************************/
+
+
+
+.table-container {
+    margin: 20px;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: black;
+    color: #ffffff;
+  }
+  th{
+    color: white;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color:  #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  

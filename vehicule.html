@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving school dashboard</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="vehicule-style.css">
+</head>
+<body>
+    <!--************navbar******************-->
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="profil">
+
+                    <div class="img-box">
+                        <img src="assets/driving school vector modern sport car.jpg" alt="profil">
+                    </div>
+                    <h2>fatima ezzahra</h2>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/dash.html">
+                        <span class="icon"><i class='bx bxs-home'></i></span>
+                        <span class="tittle">dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/student.html">
+                        <span class="icon"><i class='bx bx-group'></i></span>
+                        <span class="tittle">student progress</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/profil.html">
+                        <span class="icon"><i class='bx bxs-show' ></i></span>
+                        <span class="tittle">profil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/instructor.html">
+                        <span class="icon"><i class='bx bx-book'></i></span>
+                        <span class="tittle">instructor</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-money' ></i></span>
+                        <span class="tittle">payment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/vehicule.html">
+                        <span class="icon"><i class='bx bxs-car' ></i></span>
+                        <span class="tittle">vehicule/Maintenance</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="http://127.0.0.1:5500/login.html">
+                        <span class="icon"><i class='bx bx-log-out'></i></span>
+                        <span class="tittle">log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+<div class="content">
+        <!--***********head and search bar****************-->
+        <header class="header-content">
+            <div class="titre">
+                <h2>welcom back!</h2>
+                <span class="span-1">here's what happening in your school</span>
+            </div>
+            <div class="search-logo">
+                <div class="search-bar">
+                    <label for="search"><i class='bx bx-search-alt-2' ></i></label>
+                    <input type="search" name="search" id="search" placeholder="search here">
+                </div>
+                <div class="change">
+                    <a href="http://127.0.0.1:5500/dash.html">dash</a><span> / </span><a href="http://127.0.0.1:5500/student.html">student progresse</a>
+                </div>
+            </div>
+        </header>
+        <!--*************vehicule information************************-->
+        <main>
+         <section id="vehicle-management">
+            <h2>Vehicle Management</h2>
+            <div class="find">
+                <div class="trouver">
+                    <select id="vehicle-type" name="vehicle-type">
+                        <option value="">All vehicules</option>
+                        <option value="Car 1">Car 1</option>
+                        <option value="Car 2">Car 2</option>
+                        <option value="Car 3">Car 3</option>
+                        <option value="Car 4">Car 4</option>
+                        <option value="Truck 1">Truck 1</option>
+                        <option value="Truck 2">Truck 2</option>
+                        <option value="Truck 3">Truck 3</option>
+                    </select>
+                </div>
+                <div class="add">
+                    <input type="text" id="findInput" placeholder="find vehicule">
+                    <button type="button" onclick="Add()"><a href="http://127.0.0.1:5500/add-veh.html">Change / Add</a></button>
+                </div>
+    
+               
+             </div>
+            <div class="vehicle-info">
+                <h3>Inventory of Available Vehicles for Training</h3>
+                <table>
+                    <tr>
+                        <th>Vehicle Details</th>
+                        <td>Make: XYZ</td>
+                        <td>Model: ABC</td>
+                        <td>Year: 2022</td>
+                        <td>VIN: 123456789</td>
+                        <td>Registration: ABC123</td>
+                        <td>Insurance: Valid</td>
+                    </tr>
+                    <tr>
+                        <th>Availability Status</th>
+                        <td colspan="6">Available for training</td>
+                    </tr>
+                    <tr>
+                        <th>Location Tracking</th>
+                        <td colspan="6">Location: Main Training Area</td>
+                    </tr>
+                </table>
+                <h3>Vehicle Maintenance Schedules and Records</h3>
+                <table>
+                    <tr>
+                        <th>Maintenance Schedule</th>
+                        <td>Oil Change: Every 5000 miles</td>
+                        <td>Tire Rotation: Every 10000 miles</td>
+                        <td>Inspections: Annually</td>
+                    </tr>
+                    <tr>
+                        <th>Maintenance Logs</th>
+                        <td colspan="3">Last oil change: 2023-01-15</td>
+                    </tr>
+                    <tr>
+                        <th>Alerts and Notifications</th>
+                        <td colspan="3">Next inspection due: 2024-05-15</td>
+                    </tr>
+                </table>
+                
+                <h3>Vehicle Utilization Rates</h3>
+                <table>
+                    <tr>
+                        <th>Usage Tracking</th>
+                        <td>Total Training Hours: 100</td>
+                        <td>Distance Traveled: 500 miles</td>
+                        <td>Driving Sessions: 10</td>
+                    </tr>
+                    <tr>
+                        <th>Utilization Metrics</th>
+                        <td colspan="3">Utilization Rate: 80%</td>
+                    </tr>
+                    <tr>
+                        <th>Optimization Recommendations</th>
+                        <td colspan="3">Recommendation: Optimize schedule for peak hours</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</div> 
+
+</body>
+</html>
